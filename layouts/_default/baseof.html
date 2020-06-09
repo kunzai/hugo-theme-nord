@@ -1,11 +1,13 @@
 <!DOCTYPE html>
 <html>
     {{- partial "head.html" . -}}
-    <body>
+    <body class="max-width mx-auto px3">
         {{- partial "header.html" . -}}
-        <div id="content">
+        <div>
         {{- block "main" . }}{{- end }}
         </div>
         {{- partial "footer.html" . -}}
     </body>
+    <script src="{{ "js/highlight.pack.js" | relURL }}"></script>
+    <script>hljs.initHighlightingOnLoad();</script>
 </html>

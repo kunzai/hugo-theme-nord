@@ -1,0 +1,22 @@
+{{ define "main" }}
+    <!-- <h1 class="title">Notes</h1> -->
+    <div id="content">
+        <p>
+            Not really a blog but some personal notes in 🇬🇧 or 🇫🇷.
+        </p>
+        <ul>
+        {{ range .Pages }}
+        <li>
+          <div class="post-inner">
+              <!-- <div class="date">
+                  {{.Date.Format "02-01-2006"}}
+              </div> -->
+              <div class="title">
+                  <a href="{{.Permalink}}">{{.Title}}</a>
+              </div>
+          </div>
+        </li>
+        {{ end }}
+        </ul>
+    </div>
+{{ end }}
